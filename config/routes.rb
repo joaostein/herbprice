@@ -4,9 +4,11 @@ Herbaprice::Application.routes.draw do
     root :to => 'home#logado'
   end
   
+  devise_for :users
+  
   root :to => 'home#index'
   
-  devise_for :users
+  
   
 
 
