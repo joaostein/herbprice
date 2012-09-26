@@ -1,0 +1,32 @@
+h2 Editar Usuário
+
+= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f|
+  #{ devise_error_messages! }
+
+  div
+    label #{ f.label :email }
+    #{ f.email_field :email }
+  
+  div
+    label #{ f.label :password }
+    i  Deixe em branco se não quiser alterar.
+    #{ f.password_field :password, :autocomplete => "off" }
+
+  div
+    label #{ f.label :password_confirmation }
+    #{ f.password_field :password_confirmation, :autocomplete => "off" }
+
+  div
+    label #{ f.label :current_password }
+    i  Informe a senha atual para confirmar as mudanças.
+    #{ f.password_field :current_password, :autocomplete => "off" }
+
+  div
+    #{ f.submit "Atualizar Dados" }
+
+h2 Cancelar minha conta
+p Para cancelar sua conta, clique no link abaixo:
+#{ link_to "Cancelar minha conta", registration_path(resource_name), :data => { :confirm => "Você tem certeza?" }, :method => :delete }
+br
+br
+#{ link_to "Voltar", :back }
