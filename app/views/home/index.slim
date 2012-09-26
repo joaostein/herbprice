@@ -1,1 +1,9 @@
-h1 Herbaprice
+h1 Não Logado
+
+h2 Usuários cadastrados:
+
+ul
+  - @users.each do |user|
+    li
+      p Nome: #{ user.name }
+      p Email: #{ user.email }

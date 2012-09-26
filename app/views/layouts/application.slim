@@ -1,0 +1,30 @@
+doctype html
+
+
+html.no-js lang="pt-BR"
+
+head
+  meta charset="utf-8"
+  title "Herbaprice"
+  meta name="description" content=""
+  meta name="viewport" content="width=device-width"
+  = csrf_meta_tags
+
+  = stylesheet_link_tag 'application'
+
+
+body
+  h1 Herbaprice
+  ul
+    - unless user_signed_in?
+      li
+        = link_to('Cadastrar', new_user_registration_path, :method => :get)
+    - if user_signed_in?
+      li
+        = link_to('Logout', destroy_user_session_path, :method => :delete)
+    - else
+      li
+        = link_to('Login', new_user_session_path)
+  = yield
+
+  = javascript_include_tag 'application'
