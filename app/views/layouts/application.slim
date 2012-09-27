@@ -31,6 +31,8 @@ body
         li
           = link_to('Sair', destroy_user_session_path, :method => :delete)
 
+    = yield
+
   / ul
   /   - unless user_signed_in?
   /     li
@@ -44,6 +46,6 @@ body
   /   - else
   /     li
   /       = link_to('Login', root_path)
-  = yield
+    
 
   = javascript_include_tag 'application'
