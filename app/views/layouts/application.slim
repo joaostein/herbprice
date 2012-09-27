@@ -20,7 +20,7 @@ body
         = link_to('cadastro', new_user_registration_path, :method => :get)
         |  ou 
         = link_to('acesse', root_path)
-        sua  conta abaixo agora.
+        sua  conta agora.
     - if user_signed_in?
       p Seja bem vindo #{ @user.name }!
       ul
