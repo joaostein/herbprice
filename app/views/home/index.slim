@@ -1,6 +1,4 @@
-p Não Logado. 
-
-h2 Entrar
+h2 Acessar sua conta
 
 = form_for("user", :url => user_session_path) do |f|
   div
@@ -19,13 +17,18 @@ h2 Entrar
     #{ f.submit "Entrar" }
 
   div
-    #{ link_to "Esqueceu a senha?", new_password_path('user') }
+    #{ link_to "Esqueçeu a senha?", new_password_path('user') }
+
+h3 Não é cadastrado?
+p Se cadastre agora. Não leva mais do que 1 minuto!
+
+= link_to('Clique aqui para se cadastrar', new_user_registration_path, :method => :get)
 
 
-h2 Usuários cadastrados:
+/ h2 Usuários cadastrados:
 
-ul
-  - @users.each do |user|
-    li
-      p Nome: #{ user.name }
-      p Email: #{ user.email }
+/ ul
+/   - @users.each do |user|
+/     li
+/       p Nome: #{ user.name }
+/       p Email: #{ user.email }

@@ -1,6 +1,4 @@
 doctype html
-
-
 html.no-js lang="pt-BR"
 
 head
@@ -14,20 +12,38 @@ head
 
 
 body
-  h1 #{ link_to "Herbaprice", root_path }
-  ul
+  .container
+    h1 HerbaPrice
     - unless user_signed_in?
-      li
-        = link_to('Cadastrar', new_user_registration_path, :method => :get)
+      p 
+        | A lista de preços de produtos da Herbalife de um jeito que você nunca viu. Faça seu 
+        = link_to('cadastro', new_user_registration_path, :method => :get)
+        |  ou 
+        = link_to('acesse', root_path)
+        sua  conta abaixo agora.
     - if user_signed_in?
-      li
-        = link_to('Editar Dados', edit_user_registration_path, :method => :get)
-      li
-        = link_to('Logout', destroy_user_session_path, :method => :delete)
+      p Seja bem vindo #{ @user.name }!
+      ul
+        li
+          = link_to('Página inicial', root_path)
+        li
+          = link_to('Editar sua conta', edit_user_registration_path, :method => :get)
+        li
+          = link_to('Sair', destroy_user_session_path, :method => :delete)
 
-    - else
-      li
-        = link_to('Login', root_path)
+  / ul
+  /   - unless user_signed_in?
+  /     li
+  /       = link_to('Cadastrar', new_user_registration_path, :method => :get)
+  /   - if user_signed_in?
+  /     li
+  /       = link_to('Editar Dados', edit_user_registration_path, :method => :get)
+  /     li
+  /       = link_to('Logout', destroy_user_session_path, :method => :delete)
+
+  /   - else
+  /     li
+  /       = link_to('Login', root_path)
   = yield
 
   = javascript_include_tag 'application'
