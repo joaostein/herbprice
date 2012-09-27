@@ -1,0 +1,13 @@
+h2 Esqueçeu sua senha?
+p Não se preocupe. Informe seu e-mail que enviaremos as instruções para criar uma nova senha.
+
+= form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :post }) do |f|
+  
+  #{ devise_error_messages! }
+
+  div
+    label #{ f.label :email }
+    #{ f.email_field :email }
+
+  div
+    #{ f.submit "Enviar instruções para resetar a senha" }
