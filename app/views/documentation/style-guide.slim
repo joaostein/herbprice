@@ -3,31 +3,29 @@ h1 Guia de estilos
 
 h2 Formulários
 
-form action="#"
-  div
-    label Input type="email"
-    input type="email" placeholder="Email"
-  div
-    label Input type="text"
-    input type="text" placeholder="Texto Comum"
-  div
-    label Input type="password"
-    input type="password" placeholder="Senha"
+form
+  label Input type="email"
+  input type="email" placeholder="Email"
 
-br
+  label Input type="text"
+  input type="text" placeholder="Texto Comum"
+
+  label Input type="password"
+  input type="password" placeholder="Senha"
+
 hr
-br
 
 h2 Botões
 
-a.btn-blue-small href="#" Botão azul pequeno
-a.btn-blue-medium href="#" Botão azul médio
-a.btn-blue-large href="#" Botão azul grande
+a.btn.btn-primary.btn-small href="#" Botão azul pequeno
+br
+br
+a.btn.btn-primary href="#" Botão azul default
+br
+br
+a.btn.btn-primary.btn-large href="#" Botão azul grande
 
-br
-br
 hr
-br
 
 h2 Tipografia
 
@@ -42,33 +40,26 @@ em Itálico
 br
 a href="#" Link
 
-br
-br
 hr
-br
 
 h2 Tabelas
 
-table
+table.table.table-striped.table-bordered
   thead
-    th Heading 1
-    th Heading 2
-    th Heading 3
-    th Heading 4
-  tfoot
-    td Foot 1
-    td Foot 2
-    td Foot 3
-    td Foot 4
+    tr
+      th Heading 1
+      th Heading 2
+      th Heading 3
+      th Heading 4
   tbody
-    td Dado 1
-    td Dado 2
-    td Dado 3
-    td Dado 4
+    - 5.times do
+      tr
+        td Dado 1
+        td Dado 2
+        td Dado 3
+        td Dado 4
 
-br
 hr
-br
 
 h2 Listas
 
