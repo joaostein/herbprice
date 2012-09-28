@@ -5,7 +5,7 @@ gem 'jquery-rails'
 gem 'pg'
 gem 'slim'
 gem 'thin'
-gem 'devise', '>= 2.1.0'
+# gem 'devise', '>= 2.1.0'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
