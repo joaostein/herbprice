@@ -7,6 +7,9 @@ Herbaprice::Application.routes.draw do
   devise_for :users
   
   root :to => 'home#index'
+
+  match 'style-guide' => 'documentation#style-guide'
+
   
   
   

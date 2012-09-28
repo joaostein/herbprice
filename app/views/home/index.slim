@@ -1,28 +1,82 @@
-h2 Acessar sua conta
+header.main-header
+  h1.logo Herba Price
 
-= form_for("user", :url => user_session_path) do |f|
-  div
-    label #{ f.label :email }
-    #{ f.email_field :email }
+  nav.main-nav
+    ul
+      li
+        a href="#" Login
+      li
+        a href="#" Cadastro
+      li
+        a href="#" Contato
+
+section.primary-content
+  h1 Herba Price
+  p Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec ullamcorper nulla non metus auctor fringilla. Etiam porta sem malesuada magna mollis euismod. Maecenas sed diam eget risus varius blandit sit amet non magna. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Sed posuere consectetur est at lobortis.
+  a.btn-blue href="#" Quero me cadastrar
+
+section.secondary-content
+  h1 
+    span Porque a HerbaPrice
+
+  .content-box
+    h2 Lorem Ipsum
+    p Confira aqui algumas vantagens de se cadastrar
+
+    ul
+      li
+        h3 Lorem Ipsum
+        p Nullam id dolor id nibh ultricies vehicula ut id elit.
+      li
+        h3 Lorem Ipsum
+        p Nullam id dolor id nibh ultricies vehicula ut id elit.
+      li
+        h3 Lorem Ipsum
+        p Nullam id dolor id nibh ultricies vehicula ut id elit.
+
+  section.subscrition-action
+    h1 Cadastre-se gratuitamente
+    p Nullam id dolor id nibh ultricies vehicula ut id elit.
+
+    a.btn-blue href="#" Cadastrar
+
+footer
+  h2.label Contato
+  h3 Lorem Ipsum
+  p Lorem ipsum dolor sit amet, consectetur est laborum.
+  form action="#"
+    .first-column
+      input type="text" placeholder="Nome"
+      input type="email" placeholder="Email"
+      input type="text" placeholder="Assunto"
+    .second-column
+      textarea placeholder="Mensagem"
+      input.btn-blue type="submit" value="Enviar"
+
+
+/ = form_for("user", :url => user_session_path) do |f|
+/   div
+/     label #{ f.label :email }
+/     #{ f.email_field :email }
   
-  div
-    label #{ f.label :password }
-    #{ f.password_field :password }
+/   div
+/     label #{ f.label :password }
+/     #{ f.password_field :password }
 
-  div
-    #{ f.check_box :remember_me }
-    #{ f.label :remember_me }
+/   div
+/     #{ f.check_box :remember_me }
+/     #{ f.label :remember_me }
 
-  div
-    #{ f.submit "Entrar" }
+/   div
+/     #{ f.submit "Entrar" }
 
-  div
-    #{ link_to "Esqueçeu a senha?", new_password_path('user') }
+/   div
+/     #{ link_to "Esqueçeu a senha?", new_password_path('user') }
 
-h3 Não é cadastrado?
-p Se cadastre agora. Não leva mais do que 1 minuto!
+/ h3 Não é cadastrado?
+/ p Se cadastre agora. Não leva mais do que 1 minuto!
 
-= link_to('Clique aqui para se cadastrar', new_user_registration_path, :method => :get)
+/ = link_to('Clique aqui para se cadastrar', new_user_registration_path, :method => :get)
 
 
 / h2 Usuários cadastrados:

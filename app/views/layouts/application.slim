@@ -13,23 +13,22 @@ head
 
 body
   .container
-    h1 HerbaPrice
-    - unless user_signed_in?
-      p 
-        | A lista de preços de produtos da Herbalife de um jeito que você nunca viu. Faça seu 
-        = link_to('cadastro', new_user_registration_path, :method => :get)
-        |  ou 
-        = link_to('acesse', root_path)
-        sua  conta agora.
-    - if user_signed_in?
-      p Seja bem vindo #{ @user.name }!
-      ul
-        li
-          = link_to('Página inicial', root_path)
-        li
-          = link_to('Editar sua conta', edit_user_registration_path, :method => :get)
-        li
-          = link_to('Sair', destroy_user_session_path, :method => :delete)
+    / - unless user_signed_in?
+    /   p 
+    /     | A lista de preços de produtos da Herbalife de um jeito que você nunca viu. Faça seu 
+    /     = link_to('cadastro', new_user_registration_path, :method => :get)
+    /     |  ou 
+    /     = link_to('acesse', root_path)
+    /     sua  conta agora.
+    / - if user_signed_in?
+    /   p Seja bem vindo #{ @user.name }!
+    /   ul
+    /     li
+    /       = link_to('Página inicial', root_path)
+    /     li
+    /       = link_to('Editar sua conta', edit_user_registration_path, :method => :get)
+    /     li
+    /       = link_to('Sair', destroy_user_session_path, :method => :delete)
 
     = yield
 
