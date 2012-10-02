@@ -1,0 +1,31 @@
+//-----------------------------------------------------------------------
+// 
+//  Base » Typography
+// 
+//  Contains all typography elements.
+// 
+//-----------------------------------------------------------------------
+
+h1
+  +adjust-font-size-to(24px)
+h2
+  +adjust-font-size-to(18px)
+h3
+  +adjust-font-size-to(16px)
+h4
+  +adjust-font-size-to(15px)
+h5
+  +adjust-font-size-to(14px)
+h6
+  +adjust-font-size-to(13px)
+
+em 
+  font-style: italic
+
+strong 
+  // +font-weight(bold)
+
+p
+  // +font-weight(normal)
+  +rhythm($leader: 1, $trailer: 1)
+  +adjust-leading-to(1)
