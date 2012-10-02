@@ -6,6 +6,10 @@
 // 
 //-----------------------------------------------------------------------
 
+#{ headings(all) }
+  +font-weight(bold)
+  margin: 0
+
 h1
   +adjust-font-size-to(24px)
 h2
@@ -23,9 +27,9 @@ em
   font-style: italic
 
 strong 
-  // +font-weight(bold)
+  +font-weight(bold)
 
 p
-  // +font-weight(normal)
+  +font-weight(normal)
   +rhythm($leader: 1, $trailer: 1)
   +adjust-leading-to(1)
