@@ -1,0 +1,21 @@
+//-----------------------------------------------------------------------
+// 
+//  Base » Helpers
+// 
+//  Contains all helper classes.
+// 
+//-----------------------------------------------------------------------
+// 
+//--------------- Image Replacement ---------------//
+
+.ir
+  background-color: transparent
+  border: 0
+  overflow: hidden
+  // IE 6 and 7 fallback
+  *text-indent: -9999px
+  &:before
+    content: ""
+    display: block
+    width: 0
+    height: 100%
