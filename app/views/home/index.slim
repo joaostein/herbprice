@@ -1,57 +1,53 @@
 header.main-header
-  h1.logo Herba Price
+  .container
+    h1.logo Herba Price
 
-  nav.main-nav
-    ul
-      li
-        a href="#" Login
-      li
-        a href="#" Cadastro
-      li
-        a href="#" Contato
+    nav.main-nav
+      ul
+        li
+          a href="#" Login
+        li
+          a href="#" Cadastrar
+        li
+          a href="#" Contato
 
-section.primary-content
-  h1 Herba Price
-  p Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec ullamcorper nulla non metus auctor fringilla. Etiam porta sem malesuada magna mollis euismod. Maecenas sed diam eget risus varius blandit sit amet non magna. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Sed posuere consectetur est at lobortis.
-  a.btn.btn-primary.btn-large href="#" Quero me cadastrar
+section.main-call-to-action
+  .container
+    h1 Herba Price
+    p Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec ullamcorper nulla non metus auctor fringilla. Etiam porta sem malesuada magna mollis euismod. Maecenas sed diam eget risus varius blandit sit amet non magna. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Sed posuere consectetur est at lobortis.
+    a href="#" Quero me cadastrar
 
-section.secondary-content
-  h1 
-    span Porque a HerbaPrice
+section.main-content
+  .container
+    h1 
+      span Porque a HerbaPrice
 
-  .content-box
-    h2 Lorem Ipsum
-    p Confira aqui algumas vantagens de se cadastrar
+    .content-box
+      h2 Lorem Ipsum
+      p Confira aqui algumas vantagens de se cadastrar
 
-    ul
-      li
-        h3 Lorem Ipsum
-        p Nullam id dolor id nibh ultricies vehicula ut id elit.
-      li
-        h3 Lorem Ipsum
-        p Nullam id dolor id nibh ultricies vehicula ut id elit.
-      li
-        h3 Lorem Ipsum
-        p Nullam id dolor id nibh ultricies vehicula ut id elit.
+      ul
+        li
+          h3 Lorem Ipsum
+          p Nullam id dolor id nibh ultricies vehicula ut id elit.
+        li
+          h3 Lorem Ipsum
+          p Nullam id dolor id nibh ultricies vehicula ut id elit.
+        li
+          h3 Lorem Ipsum
+          p Nullam id dolor id nibh ultricies vehicula ut id elit.
 
-  section.subscrition-action
-    h1 Cadastre-se gratuitamente
-    p Nullam id dolor id nibh ultricies vehicula ut id elit.
+    section.subscribe
+      h1 Cadastre-se gratuitamente
+      p Nullam id dolor id nibh ultricies vehicula ut id elit.
 
-    a.btn.btn-primary.btn-large href="#" Cadastrar
+      a href="#" Cadastrar
 
-footer
-  h2 Contato
-  h3 Lorem Ipsum
-  p Lorem ipsum dolor sit amet, consectetur est laborum.
-  form action="#"
-    .first-column
-      input type="text" placeholder="Nome"
-      input type="email" placeholder="Email"
-      input type="text" placeholder="Assunto"
-    .second-column
-      textarea placeholder="Mensagem"
-      input.btn.btn-primary type="submit" value="Enviar"
+footer.main-footer
+  .container
+    h2 Contato
+    p Lorem ipsum dolor sit amet, consectetur est laborum.
+    a href="mailto:contato@herbaprice.com.br" contato@herbaprice.com.br
 
 
 / = form_for("user", :url => user_session_path) do |f|
