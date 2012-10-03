@@ -7,3 +7,47 @@
 //-----------------------------------------------------------------------
 // 
 //--------------- Main Menu ---------------//
+
+.main-nav
+  +rhythm($leader: 1, $trailer: 1)
+  height: $base-line-height
+  float: right
+  ul
+    +pie-clearfix
+  li
+    display: block
+    float: left
+    border-left: 1px solid #ccc
+    &:first-child
+      border-left: 0
+  a
+    +adjust-font-size-to(12px)
+    +font-weight("bold")
+    color: #5f5f5f
+    text-transform: uppercase
+    height: $base-line-height
+    padding: 0 25px
+    display: block
+
+.main-nav-login
+  a
+    color: #069897
+
+
+.main-nav-cadastro
+
+
+.main-nav-contato
+
+
+
+
+
+
+
+
+
+
+
+
+
