@@ -31,3 +31,37 @@ ul
   - else
     li
       = link_to('Login', root_path)
+
+
+= form_for("user", :url => user_session_path) do |f|
+  div
+    label #{ f.label :email }
+    #{ f.email_field :email }
+  
+  div
+    label #{ f.label :password }
+    #{ f.password_field :password }
+
+  div
+    #{ f.check_box :remember_me }
+    #{ f.label :remember_me }
+
+  div
+    #{ f.submit "Entrar" }
+
+  div
+    #{ link_to "Esqueçeu a senha?", new_password_path('user') }
+
+h3 Não é cadastrado?
+p Se cadastre agora. Não leva mais do que 1 minuto!
+
+= link_to('Clique aqui para se cadastrar', new_user_registration_path, :method => :get)
+
+
+h2 Usuários cadastrados:
+
+ul
+  - @users.each do |user|
+    li
+      p Nome: #{ user.name }
+      p Email: #{ user.email }
