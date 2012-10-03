@@ -12,10 +12,3 @@
 //
 //= require jquery
 //= require jquery_ujs
-
-
-
-
-
-// Remove in Production
-//= require hashgrid
