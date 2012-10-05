@@ -26,7 +26,19 @@
     background: #f5f6f3
     border-color: #ddd
 
+    &:last-child
+      +border-radius(0 0 5px 5px)
+
+
+  img
+    float: left
+    margin-right: 30px
+
   ul
     margin: 0
     padding: 0
     list-style: none
+
+  h4
+    +adjust-font-size-to(14px, 1)
+    color: #02baba
