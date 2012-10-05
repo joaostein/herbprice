@@ -17,27 +17,37 @@
 
 .features-table
   +border-radius(5px)
-  border: 1px solid #ccc
+  +apply-side-rhythm-border($side: left, $width: 1px, $lines: 0)
+  +apply-side-rhythm-border($side: right, $width: 1px, $lines: 0)
+  border-color: #ccc
 
+  h3
+    +adjust-font-size-to(22px)
+    line-height: $base-line-height * 2
+
+  h4
+    +adjust-font-size-to(14px)
+    line-height: $base-line-height
+    color: #02baba
+
+  div, li
+    padding-left: 30px
+    padding-right: 30px
+    border-color: #ccc
+  
   div
-    +rhythm($padding-leader: 1, $padding-trailer: 1)
-    padding-left: 30px
-    padding-right: 30px
-
-  p
-    margin: 0
-
-  li
-    +rhythm($padding-leader: 0, $padding-trailer: 1)
+    +border-radius(5px 5px 0 0)
+    +padding-trailer(1)
     +leading-border($width: 1px, $lines: 1)
-    padding-left: 30px
-    padding-right: 30px
+  li
+    +padding-trailer(1)
+    +leading-border($width: 1px, $lines: 1)
     background: #f5f6f3
-    border-color: #ddd
-
     &:last-child
       +border-radius(0 0 5px 5px)
-
+      +trailing-border($width: 1px, $lines: 1)
+  p
+    margin: 0
 
   img
     float: left
@@ -48,11 +58,3 @@
     padding: 0
     list-style: none
 
-  h3
-    +adjust-font-size-to(22px)
-    line-height: $base-line-height * 2
-
-  h4
-    +adjust-font-size-to(14px)
-    line-height: $base-line-height
-    color: #02baba

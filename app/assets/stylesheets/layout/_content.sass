@@ -8,12 +8,15 @@
 
 
 .l-content-title
-  // +leading-border($width: 1px, $lines: 0, $font-size: $base-font-size)
-  // height: $base-line-height * 2
-  // position: relative
+  +leading-border($width: 1px, $lines: 0, $font-size: $base-font-size)
+  +rhythm($leader: 2, $trailer: 1, $font-size: 18px)
+  border-color: #ccc
+  height: $base-line-height * 2
+  position: relative
 
 
   span
-    // +leading-border($width: 3px, $lines: 0, $font-size: $base-font-size)
-    border-color: green
-    // position: absolute
+    +leading-border($width: 3px, $lines: 0, $font-size: $base-font-size)
+    top: -2px
+    border-color: #66a436
+    position: absolute
