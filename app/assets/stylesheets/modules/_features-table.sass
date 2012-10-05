@@ -1,0 +1,32 @@
+//-----------------------------------------------------------------------
+// 
+//  Modules » Features Table
+// 
+//  Contains all feature table at home configurations.
+// 
+//-----------------------------------------------------------------------
+
+.features-table
+  +border-radius(5px)
+  border: 1px solid #ccc
+
+  div
+    +rhythm($padding-leader: 1, $padding-trailer: 1)
+    padding-left: 30px
+    padding-right: 30px
+
+  p
+    margin: 0
+
+  li
+    +rhythm($padding-leader: 0, $padding-trailer: 1)
+    +leading-border($width: 1px, $lines: 1)
+    padding-left: 30px
+    padding-right: 30px
+    background: #f5f6f3
+    border-color: #ddd
+
+  ul
+    margin: 0
+    padding: 0
+    list-style: none
