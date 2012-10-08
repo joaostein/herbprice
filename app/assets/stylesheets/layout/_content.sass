@@ -5,7 +5,8 @@
 //  Contains all content configurations.
 // 
 //-----------------------------------------------------------------------
-
+// 
+//--------------- Title of each individual page (under menu) ---------------//
 
 .l-content-page-title
   h1
@@ -13,7 +14,8 @@
     +adjust-leading-to(4, 42px)
     float: left
     margin-left: 25px
-  span
+
+//--------------- Title with green line on top ---------------//
 
 .l-content-title
   +leading-border($width: 1px, $lines: 0, $font-size: $base-font-size)
@@ -26,6 +28,8 @@
     top: -2px
     border-color: #66a436
     position: absolute
+
+//--------------- Section on top of site (under menu) with a pattern bg ---------------//
 
 .l-content-highlight
   +rhythm($padding-leader: 3, $trailer: 2)
