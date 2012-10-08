@@ -13,10 +13,14 @@
   border-color: #ccc
   height: $base-line-height * 2
   position: relative
-
-
   span
     +leading-border($width: 3px, $lines: 0, $font-size: $base-font-size)
     top: -2px
     border-color: #66a436
     position: absolute
+
+.l-content-highlight
+  +rhythm($padding-leader: 3, $trailer: 2)
+  +trailing-border($width: 1px, $lines: 3)
+  background: url("primary-subscription-background-pattern.png") center top repeat-x
+  border-color: #ccc
