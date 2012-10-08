@@ -7,6 +7,16 @@
 //-----------------------------------------------------------------------
 
 
+.l-content-page-title
+  h1
+    +adjust-font-size-to(42px)
+    +adjust-leading-to(4, 42px)
+    float: left
+    margin-left: 25px
+  span
+    +pre(2)
+
+
 .l-content-title
   +leading-border($width: 1px, $lines: 0, $font-size: $base-font-size)
   +rhythm($leader: 2, $trailer: 1, $font-size: 18px)
