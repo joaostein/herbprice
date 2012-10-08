@@ -1,0 +1,29 @@
+//-----------------------------------------------------------------------
+// 
+//  Layouts » Subscription
+// 
+//  Contains all Subscriptions layouts configurations.
+// 
+//-----------------------------------------------------------------------
+
+//--------------- Subscription call to action (on home) ---------------//
+
+.l-subscription-call-to-action
+  figure
+    +span-columns(7, 14)
+  > div
+    +span-columns(6 omega, 14)
+
+//--------------- Independent Subscription Box ---------------//
+
+.l-subscription-box
+  +rhythm-borders(1px, 1)
+  +border-radius(5px)
+  +margin-leader(2)
+  +pie-clearfix
+  border-color: #ccc
+  background: #fff
+  .btn
+    float: right
+  div
+    float: left
