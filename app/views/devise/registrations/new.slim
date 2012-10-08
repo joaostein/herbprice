@@ -5,8 +5,22 @@ section.l-content-highlight
       h1 Cadastro
 
 .container
-  section.content-narrow
+  .content-narrow
     .l-subscription-page
+      .subscription-page-description
+        h2 Lorem Ipsum
+        p Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Donec id elit non mi porta gravida at eget metus.
+      .subscription-page-form
+        = form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f|
+          #{ devise_error_messages! }
+          #{ f.text_field :name, placeholder: 'Nome' }
+          #{ f.email_field :email, placeholder: 'Email' }
+          #{ f.password_field :password, placeholder: 'Senha' }
+          #{ f.password_field :password_confirmation, placeholder: 'Confirmar Senha' }
+          #{ f.submit "Cadastrar", class: 'btn' }
+
+
+
 
 
 
