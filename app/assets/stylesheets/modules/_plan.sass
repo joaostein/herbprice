@@ -6,23 +6,56 @@
 // 
 //-----------------------------------------------------------------------
 // 
-//--------------- Plan Box ---------------//
+//--------------- Plan ---------------//
 
 .plan
-  width: 274px
+  width: 270px
   h1
     +adjust-font-size-to(28px)
     +text-shadow(0 1px 1px rgba(0,0,0,.5))
     +border-radius(4px 4px 0 0)
-    +background-image(linear-gradient(bottom, #4e5769, #6b7587))
+    +background-image(linear-gradient(bottom, #4f586a, #6b7587))
     +box-shadow(inset 0px 1px 1px rgba(255,255,255,.65))
     +rhythm-borders(1px, 1, 28px)
     color: #f5f5f5
-    background: #5f697c
+    background-color: #5f697c
     border-color: #4e5769
     text-align: center
   sup
     +adjust-font-size-to(16px)
+  small
+    +adjust-font-size-to(14px, 1, 28px)
+    +font-weight("semibold")
+    display: block
+  .btn
+    width: 200px
+
+.plan-hightlight
+  width: 285gpx
+  +border-radius(8px 8px 8px 8px)
+  +rhythm-borders(5px, 0)
+  border-color: rgba(0, 0, 0, .1)
+  h1
+    +background-image(linear-gradient(bottom, #079191, #02c7c7))
+    border-color: #079191
+
+  .plan-price
+    background: #f5f5f5
+
+  .plan-features, .plan-call-to-action
+    background: #fbfbfb
+
+  .plan-call-to-action
+    +rhythm($padding-leader: 1.5, $padding-trailer: 1.5)
+    border-color: #aaa
+
+  .plan-price, .plan-features li
+    border-left-color: #aaa
+    border-right-color: #aaa
+
+  .btn
+    width: 100%
+
 
 //--------------- Plan Features ---------------//
 
@@ -33,26 +66,26 @@
   background-color: #f5f5f5
   list-style: none
   li
-    +apply-side-rhythm-border($side: left, $width: 1px, $lines: 2)
+    +apply-side-rhythm-border($side: left, $width: 1px, $lines: 2.5)
     +apply-side-rhythm-border($side: right, $width: 1px, $lines: 1)
     +rhythm($padding-leader: 1, $padding-trailer: 0)
     +trailing-border($width: 1px, $lines: 1)
     border-color: #ccc
 
 .plan-features-present
-  background: url('list-style-present.png') no-repeat 5% center
+  background: url('list-style-present.png') no-repeat 20px 24px
   color: #4b5361
 
 .plan-features-not-present
   color: #8b8f96
-  background: url('list-style-not-present.png') no-repeat 5% center
+  background: url('list-style-not-present.png') no-repeat 20px 22px
 
-.plan-call-to-action
-  +rhythm-borders(1px, 1)
-  +border-radius(0px 0px 4px 4px)
-  border-top: 0
-  border-color: #ccc
-  background-color: #f5f5f5
+.browser-compatibility
+  +small-elements-sprite("browser-compatibility")
+  +margin-leader(0.5)
+  display: block
+  width: 123px
+  height: 20px
 
 
 //--------------- Plan price ---------------//
@@ -74,6 +107,15 @@
 .plan-price-notes
   +font-weight("normal")
   display: block
+
+//--------------- Plan Call to action ---------------//
+
+.plan-call-to-action
+  +rhythm-borders(1px, 1)
+  +border-radius(0px 0px 4px 4px)
+  border-top: 0
+  border-color: #ccc
+  background-color: #f5f5f5
 
 
 
