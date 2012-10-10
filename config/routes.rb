@@ -9,10 +9,7 @@ Herbaprice::Application.routes.draw do
   root :to => 'home#index'
 
   match 'style-guide' => 'documentation#style-guide'
-
-  
-  
-  
+  match 'planos' => 'plans#index'
 
 
   # The priority is based upon order of creation:
